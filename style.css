@@ -266,21 +266,15 @@ a {
 
 #edu_gt {
   background: #98D5F4 url("img/edu/bg/gt.jpg") no-repeat bottom;
-  background-size: contain; }
+  background-size: cover; }
   #edu_gt .logo {
     background: url("img/edu/logo/gt.png") no-repeat center;
     background-size: contain; }
 
-#edu_ncta {
-  background: #958E31 url("img/edu/bg/ncta.jpg") no-repeat bottom;
-  background-size: contain; }
-  #edu_ncta .logo {
-    background: url("img/edu/logo/ncta.png") no-repeat center;
-    background-size: contain; }
 
 #edu_aae {
   background: #F1AE32 url("img/edu/bg/aae.jpg") no-repeat bottom;
-  background-size: contain; }
+  background-size: cover; }
   #edu_aae .logo {
     background: url("img/edu/logo/aae.png") no-repeat center;
     background-size: contain; }
