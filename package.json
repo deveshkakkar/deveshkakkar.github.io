@@ -1,5 +1,5 @@
 {
-  "name": "jasonpark.me",
+  "name": "deveshkakkar.github.io",
   "version": "1.0.0",
   "description": "",
   "main": "script.js",
@@ -8,13 +8,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/parkjs814/jasonpark.me.git"
+    "url": "https://github.com/deveshkakkar/deveshkakkar.github.io"
   },
-  "author": "Jason Park",
-  "license": "ISC",
+  "author": "Devesh Kakkar",
+  "license": "MIT",
   "bugs": {
-    "url": "https://github.com/parkjs814/jasonpark.me/issues"
+    "url": "https://github.com/deveshkakkar/deveshkakkar.github.io/issues"
   },
-  "homepage": "https://github.com/parkjs814/jasonpark.me",
+  "homepage": "https://github.com/deveshkakkar/deveshkakkar.github.io",
   "devDependencies": {}
 }
