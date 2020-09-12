@@ -209,7 +209,7 @@ a {
 
 .page.right {
   display: flex;
-  flex-flow: row wrap; }
+  flex-flow: column wrap; }
   .page.right .prj {
     font-weight: normal !important;
     flex: 1 50%; }
@@ -279,8 +279,8 @@ a {
     background: url("img/edu/logo/aae.png") no-repeat center;
     background-size: contain; }
 
-#prz_arml {
-  background: url("img/prz/arml.jpg") center;
+#prz_ru {
+  background: url("img/prz/ru.jpg") center;
   background-size: cover; }
 
 #prz_case {
@@ -328,19 +328,27 @@ a {
   background-size: cover; }
 
 #prj_bumpy {
-  background: url("img/prj/bumpy.gif") top center no-repeat;
+  background: url("img/prj/bumpy.gif") center no-repeat;
   background-size: cover; }
 
 #prj_imitator {
-  background: url("img/prj/imitator.png") top center no-repeat;
+  background: url("img/prj/imitator.png") center no-repeat;
   background-size: cover; }
 
 #prj_hang {
-  background: url("img/prj/hang.png") bottom center no-repeat;
+  background: url("img/prj/hang.png") center no-repeat;
   background-size: cover; }
 
 #prj_auto {
   background: url("img/prj/auto.png") center no-repeat;
+  background-size: cover; }
+
+#prj_hydro {
+  background: url("img/prj/hydro.JPG") center no-repeat;
+  background-size: cover; }
+
+#prj_wind {
+  background: url("img/prj/wind.PNG") center no-repeat;
   background-size: cover; }
 
 @keyframes rotating {
