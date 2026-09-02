@@ -1,6 +1,6 @@
 const knowledge = [
   {
-    topics: ["scale", "scaled", "traffic", "recommendation", "recommendations", "inference", "requests", "volume"],
+    topics: ["scale", "scaled", "traffic", "recommendation", "recommendations", "inference", "requests", "volume", "system", "systems", "build"],
     answer: "Devesh works on high-scale search, recommendation, machine-learning, and data systems. His focus is designing services that stay reliable and understandable as traffic, data volume, and system complexity grow.",
     link: "#work",
     linkText: "See the selected impact"
