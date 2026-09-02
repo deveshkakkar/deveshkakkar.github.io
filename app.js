@@ -64,6 +64,18 @@ const knowledge = [
     answer: "Devesh is currently building Floating Brain, a personal capture system that brings unfinished thoughts back into view through an ambient daily dashboard.",
     link: "#now",
     linkText: "View the current project"
+  },
+  {
+    topics: ["language", "languages", "stack", "technology", "technologies", "java", "python", "typescript", "javascript"],
+    answer: "Devesh works mostly with Java, Python, and TypeScript. His broader technical interests include distributed systems, cloud infrastructure, production ML, and practical AI products.",
+    link: "#work",
+    linkText: "See what he works on"
+  },
+  {
+    topics: ["hobby", "hobbies", "outside", "fun", "personal", "basketball", "workout", "working", "cooking", "interests"],
+    answer: "Outside work, Devesh enjoys reading, basketball, working out, and cooking. He also likes building personal tools that connect software with everyday routines.",
+    link: "#notes",
+    linkText: "Read the current log"
   }
 ];
 
