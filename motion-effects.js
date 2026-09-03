@@ -30,6 +30,15 @@ if (!prefersReducedMotion) {
       animate(".system-readout > *", { opacity: [0, 1], x: [10, 0] }, { duration: .32, delay: stagger(.035) });
     });
 
+    document.addEventListener("logfilter", () => {
+      if (document.documentElement.classList.contains("motion-paused")) return;
+      animate(
+        document.querySelectorAll(".log-entry:not([hidden])"),
+        { opacity: [0, 1], x: [-8, 0] },
+        { duration: .26, delay: stagger(.025), ease: "easeOut" }
+      );
+    });
+
     let pointerFrame = null;
     document.addEventListener("pointermove", event => {
       if (document.documentElement.classList.contains("motion-paused") || event.pointerType === "touch" || pointerFrame) return;
