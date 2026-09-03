@@ -72,22 +72,10 @@ const knowledge = [
     linkText: "See what he works on"
   },
   {
-    topics: ["hobby", "hobbies", "outside", "fun", "personal", "soccer", "tennis", "workout", "working", "cooking", "interests"],
-    answer: "Outside work, Devesh enjoys reading, playing soccer and tennis, working out, and cooking. He also likes building personal tools that connect software with everyday routines.",
+    topics: ["hobby", "hobbies", "outside", "fun", "personal", "basketball", "workout", "working", "cooking", "interests"],
+    answer: "Outside work, Devesh enjoys reading, basketball, working out, and cooking. He also likes building personal tools that connect software with everyday routines.",
     link: "#notes",
     linkText: "Read the current log"
-  },
-  {
-    topics: ["github", "handwriting", "font", "vision", "stock", "prediction", "repository", "repositories", "experiments"],
-    answer: "Devesh’s public GitHub includes a Java computer-vision experiment for turning handwriting into a personal font and an early Python stock-prediction project using market indicators and headline sentiment.",
-    link: "#projects",
-    linkText: "Browse the public projects"
-  },
-  {
-    topics: ["recently", "finished", "reading", "books", "fiction", "nonfiction", "red", "rising", "dungeon", "crawler", "alchemist", "outliers", "swan", "naval"],
-    answer: "Devesh’s recent reading trail moves across science fiction, literary fiction, mythology, and nonfiction—from the Red Rising trilogy and the first three Dungeon Crawler Carl books to The Stranger, The Alchemist, Outliers, Zero to One, and The Black Swan.",
-    link: "#notes",
-    linkText: "Explore the reading trail"
   }
 ];
 
@@ -172,24 +160,6 @@ form.addEventListener("submit", event => {
 
 document.querySelectorAll("[data-question]").forEach(button => {
   button.addEventListener("click", () => ask(button.dataset.question));
-});
-
-const logFilters = document.querySelectorAll("[data-log-filter]");
-const logEntries = document.querySelectorAll("[data-log]");
-
-logFilters.forEach(button => {
-  button.addEventListener("click", () => {
-    const filter = button.dataset.logFilter;
-    logFilters.forEach(item => {
-      const active = item === button;
-      item.classList.toggle("is-active", active);
-      item.setAttribute("aria-pressed", String(active));
-    });
-    logEntries.forEach(entry => {
-      entry.hidden = filter !== "all" && entry.dataset.log !== filter;
-    });
-    document.dispatchEvent(new CustomEvent("logfilter", { detail: { filter } }));
-  });
 });
 
 const systemDetails = {
