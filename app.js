@@ -162,4 +162,92 @@ document.querySelectorAll("[data-question]").forEach(button => {
   button.addEventListener("click", () => ask(button.dataset.question));
 });
 
+const systemDetails = {
+  product: {
+    code: "00 / PRODUCT",
+    title: "Useful product",
+    text: "The center of the map: technology is useful when it produces a clear customer or human outcome."
+  },
+  search: {
+    code: "01 / SEARCH",
+    title: "Search & relevance",
+    text: "Translate intent and context into discovery experiences that help people reach a useful result faster."
+  },
+  ml: {
+    code: "02 / ML",
+    title: "Production ML",
+    text: "Connect models to evaluation, serving, observability, and rollout paths so predictions remain dependable."
+  },
+  systems: {
+    code: "03 / SYSTEMS",
+    title: "Distributed systems",
+    text: "Shape services, data flows, and failure boundaries that stay understandable as scale and complexity grow."
+  },
+  ai: {
+    code: "04 / AI TOOLS",
+    title: "AI for workflows",
+    text: "Use AI to reduce repetitive work and improve decisions while keeping people in control of the outcome."
+  }
+};
+
+const systemNodes = document.querySelectorAll("[data-system]");
+const systemTitle = document.querySelector("#systemDetailTitle");
+const systemText = document.querySelector("#systemDetailText");
+const systemCode = document.querySelector("#systemCode");
+
+systemNodes.forEach(node => {
+  node.addEventListener("click", () => {
+    const selected = node.dataset.system;
+    const detail = systemDetails[selected];
+    systemNodes.forEach(item => {
+      const active = item === node;
+      item.classList.toggle("is-active", active);
+      item.setAttribute("aria-pressed", String(active));
+    });
+    document.querySelectorAll("[data-link]").forEach(link => {
+      link.classList.toggle("is-active", link.dataset.link === selected);
+    });
+    systemCode.textContent = detail.code;
+    systemTitle.textContent = detail.title;
+    systemText.textContent = detail.text;
+    document.dispatchEvent(new CustomEvent("systemchange", { detail: { selected } }));
+  });
+});
+
+const seattleTime = document.querySelector("#seattleTime");
+const seattleDate = document.querySelector("#seattleDate");
+
+function updateSeattleClock() {
+  const now = new Date();
+  seattleTime.textContent = new Intl.DateTimeFormat("en-US", {
+    timeZone: "America/Los_Angeles",
+    hour: "numeric",
+    minute: "2-digit"
+  }).format(now);
+  seattleDate.textContent = new Intl.DateTimeFormat("en-US", {
+    timeZone: "America/Los_Angeles",
+    weekday: "short",
+    month: "short",
+    day: "numeric"
+  }).format(now) + " · Seattle";
+}
+
+updateSeattleClock();
+window.setInterval(updateSeattleClock, 30000);
+
+const motionToggle = document.querySelector("#motionToggle");
+if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+  motionToggle.setAttribute("aria-pressed", "false");
+  motionToggle.querySelector("strong").textContent = "Reduced";
+  motionToggle.disabled = true;
+  document.documentElement.classList.add("motion-paused");
+} else {
+  motionToggle.addEventListener("click", () => {
+    const enabled = motionToggle.getAttribute("aria-pressed") !== "true";
+    motionToggle.setAttribute("aria-pressed", String(enabled));
+    motionToggle.querySelector("strong").textContent = enabled ? "On" : "Off";
+    document.documentElement.classList.toggle("motion-paused", !enabled);
+  });
+}
+
 document.querySelector("#year").textContent = new Date().getFullYear();

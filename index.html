@@ -3,13 +3,13 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#080d14">
+  <meta name="theme-color" content="#050908">
   <meta name="description" content="Devesh Kakkar is a Software Development Engineer II working across search, recommendations, machine learning, and distributed systems.">
   <meta property="og:title" content="Devesh Kakkar — Software Engineer">
   <meta property="og:description" content="Software engineer building search, recommendation, machine-learning, and distributed systems.">
   <title>Devesh Kakkar — Software Engineer</title>
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='9' fill='%23080d14'/%3E%3Cpath d='M18 16h14c11 0 18 6 18 16S43 48 32 48H18V16Zm10 8v16h4c6 0 9-3 9-8s-3-8-9-8h-4Z' fill='%235ce1e6'/%3E%3C/svg%3E">
-  <link rel="stylesheet" href="styles.css?v=20260902b">
+  <link rel="stylesheet" href="styles.css?v=20260903">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -20,7 +20,7 @@
         <span><strong>Devesh Kakkar</strong><small>Software Engineer</small></span>
       </a>
       <nav aria-label="Primary navigation">
-        <a href="#notes">Notes</a><a href="#projects">Projects</a><a href="#experience">Experience</a><a href="#assistant">Ask AI</a><a href="mailto:devesh.kakkar@hotmail.com">Contact</a>
+        <a href="#notes">Notes</a><a href="#systems">Systems</a><a href="#projects">Projects</a><a href="#assistant">Ask AI</a><a href="mailto:devesh.kakkar@hotmail.com">Contact</a>
       </nav>
     </header>
 
@@ -70,8 +70,33 @@
           </div>
         </section>
 
+        <section class="panel systems-panel" id="systems" aria-labelledby="systems-title">
+          <div class="panel-heading"><h2 id="systems-title">Systems playground</h2><span>04 / INTERACTIVE</span></div>
+          <div class="systems-widget">
+            <div class="system-map" role="group" aria-label="Select an engineering area">
+              <svg viewBox="0 0 600 360" preserveAspectRatio="none" aria-hidden="true">
+                <path data-link="search" d="M300 180 L120 74" />
+                <path data-link="ml" d="M300 180 L480 74" />
+                <path data-link="systems" d="M300 180 L120 286" />
+                <path data-link="ai" d="M300 180 L480 286" />
+              </svg>
+              <button class="system-node node-search" type="button" data-system="search"><span>Search</span><small>Intent</small></button>
+              <button class="system-node node-ml" type="button" data-system="ml"><span>Production ML</span><small>Signals</small></button>
+              <button class="system-node node-product is-active" type="button" data-system="product" aria-pressed="true"><span>Useful product</span><small>Customer</small></button>
+              <button class="system-node node-systems" type="button" data-system="systems"><span>Distributed systems</span><small>Scale</small></button>
+              <button class="system-node node-ai" type="button" data-system="ai"><span>AI tools</span><small>Workflow</small></button>
+            </div>
+            <div class="system-readout" aria-live="polite">
+              <p class="readout-label">SELECTED NODE <span id="systemCode">00 / PRODUCT</span></p>
+              <h3 id="systemDetailTitle">Useful product</h3>
+              <p id="systemDetailText">The center of the map: technology is useful when it produces a clear customer or human outcome.</p>
+              <div class="signal-bars" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+            </div>
+          </div>
+        </section>
+
         <section class="panel" id="projects" aria-labelledby="projects-title">
-          <div class="panel-heading"><h2 id="projects-title">Projects</h2><span>04 / SELECTED</span></div>
+          <div class="panel-heading"><h2 id="projects-title">Projects</h2><span>05 / SELECTED</span></div>
           <div class="project-list">
             <article><div class="project-topline"><h3>Floating Brain</h3><span class="project-state active">Active</span></div><p>A personal system for capturing ideas quickly and resurfacing them on an ambient display when they are useful again.</p><div class="tag-row"><span>Personal knowledge</span><span>Ambient computing</span><span>AWS</span></div></article>
             <article><div class="project-topline"><h3>Jobs Marketplace</h3><span class="project-state">Shipped</span></div><p>A mobile marketplace built across product design, React Native, cloud services, and backend systems.</p><div class="tag-row"><span>React Native</span><span>Cloud services</span><span>Product</span></div></article>
@@ -80,7 +105,7 @@
         </section>
 
         <section class="panel" id="experience" aria-labelledby="experience-title">
-          <div class="panel-heading"><h2 id="experience-title">Experience</h2><span>05 / TIMELINE</span></div>
+          <div class="panel-heading"><h2 id="experience-title">Experience</h2><span>06 / TIMELINE</span></div>
           <div class="timeline">
             <article><div class="timeline-marker"><span></span></div><div class="timeline-copy"><div class="role-line"><h3>Software Development Engineer II</h3><time>2025 — Present</time></div><p class="company">Amazon · Private Brands Search</p><p>Working across search, recommendation, ML, and data systems with ownership spanning design, delivery, and operations.</p></div></article>
             <article><div class="timeline-marker"><span></span></div><div class="timeline-copy"><div class="role-line"><h3>Software Development Engineer I</h3><time>2023 — 2025</time></div><p class="company">Amazon · Private Brands Detail Page</p><p>Built and operated customer-facing experiences with a focus on experimentation, reliability, and product outcomes.</p></div></article>
@@ -115,6 +140,11 @@
           <dl><div><dt>Role</dt><dd>SDE II</dd></div><div><dt>Based in</dt><dd>Seattle, WA</dd></div><div><dt>Working on</dt><dd>Private Brands Search</dd></div><div><dt>Interested in</dt><dd>Systems · ML · AI products</dd></div></dl>
           <a class="email-link" href="mailto:devesh.kakkar@hotmail.com">devesh.kakkar@hotmail.com</a>
         </section>
+        <section class="panel signal-panel" aria-labelledby="signal-title">
+          <div class="panel-heading"><h2 id="signal-title">Live signal</h2><span>LOCAL</span></div>
+          <div class="clock-row"><div><time id="seattleTime">--:--</time><p id="seattleDate">Seattle</p></div><span class="live-indicator"><i aria-hidden="true"></i> Online</span></div>
+          <button class="motion-toggle" id="motionToggle" type="button" aria-pressed="true"><span>Motion</span><strong>On</strong></button>
+        </section>
         <section class="panel now-panel" id="now" aria-labelledby="now-title">
           <div class="panel-heading"><h2 id="now-title">Now</h2><span>UPDATED</span></div>
           <article><span class="now-label">Currently reading</span><h3>Angels &amp; Demons</h3><p>Dan Brown</p></article>
@@ -132,6 +162,7 @@
 
     <footer><span>© <span id="year"></span> Devesh Kakkar</span><span class="footer-status"><i aria-hidden="true"></i> Site operational</span><a href="#top">Back to top ↑</a></footer>
   </div>
-  <script src="app.js?v=20260902b" defer></script>
+  <script src="app.js?v=20260903" defer></script>
+  <script src="motion-effects.js?v=20260903" type="module"></script>
 </body>
 </html>
